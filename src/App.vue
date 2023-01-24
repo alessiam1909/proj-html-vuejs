@@ -12,27 +12,35 @@ export default{
       navList: [
         {
           name: "HOME",
-          url: "#null"
+          url: "#null",
+          stato: true
         },
         {
           name: "ABOUT",
-          url: "https://avada.theme-fusion.com/driving/about/"
+          url: "https://avada.theme-fusion.com/driving/about/",
+          stato: false
         },
         {
           name: "PRICES",
-          url: "https://avada.theme-fusion.com/driving/prices/"
+          url: "https://avada.theme-fusion.com/driving/prices/",
+          stato: false
         },
         {
           name: "COURSES",
-          url: "https://avada.theme-fusion.com/driving/courses/"
+          url: "https://avada.theme-fusion.com/driving/courses/",
+          new: true,
+          dropdownMenu: ["Intensive", "Pss Plus", "Instructor"],
+          stato: false
         },
         {
           name: "LOCATIONS",
-          url: "https://avada.theme-fusion.com/driving/locations/"
+          url: "https://avada.theme-fusion.com/driving/locations/",
+          stato: false
         },
         {
           name: "BLOG",
-          url: "https://avada.theme-fusion.com/driving/blog/"
+          url: "https://avada.theme-fusion.com/driving/blog/",
+          stato: false
         }
       ]
     }
