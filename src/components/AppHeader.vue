@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template lang="">
-    <div class="first header">
+    <div class="first-header">
         <div class="row">
             <div>We have a 95% Successful Pass Rate!</div>
             <div>Give us a call to book your tuition! 1-800-555-555</div>
@@ -19,11 +19,15 @@ export default {
     @use '../styles/partials/variables.scss' as *;
     @use '../styles/partials/mixins.scss' as *;
 
+
     .first-header{
         background-color: $black;
+        height: 50px;
 
         .row{
-            @include width80;
+            @include width70;
+            @include flex-between;
+            color: $grey;
         }
     }
 </style>
