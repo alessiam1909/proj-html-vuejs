@@ -22,16 +22,18 @@ export default {
                 <header>
                     <img src="../assets/images/avada-drivers-logo-1x.png" alt="logo">
                     <ul class="navbar">
-                        <li v-for="(item, index) in navList" :key="index">
+                        <li v-for="(item, index) in navList" :key="index" @click="item.isOpen = !item.isOpen">
                             <div>
                                 <a :href="item.url">{{item.name}}</a>
                                 <span v-if="item.new" class="newButton">NEW</span> 
                                 <i v-if="item.new" class="fa-solid fa-chevron-down"></i>
-                                <ul v-if="item.dropdownMenu" class="dropdown">
-                                    <li v-for="(item, index) in item.dropdownMenu" :key="index">
-                                        <a href="">{{item}}</a>
-                                    </li>
-                                </ul>
+                                <div v-if="item.isOpen">
+                                    <ul v-if="item.dropdownMenu" class="dropdown">
+                                        <li v-for="(item, index) in item.dropdownMenu" :key="index">
+                                            <a href="">{{item}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -90,11 +92,11 @@ export default {
                         position: relative;
                         
                         li{
-                            margin: 0 20px;
                             padding: 12px;
                             font-size: 17px;
 
                             a{
+                                margin: 0 10px;
                                 text-decoration: none;
                                 color: $white;
                             }
@@ -102,7 +104,6 @@ export default {
                             span{
                                 color: $white;
                                 padding: 5px;
-                                margin: 0 10px;
                                 background-color: $green;
                                 font-size: 15px;
                                 border-radius: 5px;
@@ -110,18 +111,37 @@ export default {
 
                             i{
                                 color: $white;
+                                margin-left: 5px;
                                 font-size: 12px;
                                 padding: 2px;
                             }
     
                             .dropdown{
-                                display: none;
                                 position: absolute;
+                                top: 50px;
+                                left: 45%;
                                 background-color:$white ;
-                                color: black;
+                                list-style-type: none;
+                                
+                                li{
+                                    width: 100%;
+                                    border-bottom: 1px solid $grey;
+                                    a{
+                                        text-decoration: none;
+                                        color: black;
+                                        padding: 5px;
+                                        &:hover, &:active{
+                                            color: white;
+                                            transition: all 2s;
+                                        }
 
-
-
+                                    }
+                                    &:hover, &:active{
+                                        background-color: $green;
+                                        transition: all 2s;
+                                    }
+    
+                                }
                             }
 
                         }

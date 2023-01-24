@@ -29,7 +29,8 @@ export default{
           name: "COURSES",
           url: "https://avada.theme-fusion.com/driving/courses/",
           new: true,
-          dropdownMenu: ["Intensive", "Pss Plus", "Instructor"],
+          dropdownMenu: ["Intensive", "Pass Plus", "Instructor"],
+          isOpen: false,
           stato: false
         },
         {
