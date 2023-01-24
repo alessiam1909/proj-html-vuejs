@@ -110,6 +110,8 @@ export default {
 
                             i{
                                 color: $white;
+                                font-size: 12px;
+                                padding: 2px;
                             }
     
                             .dropdown{
