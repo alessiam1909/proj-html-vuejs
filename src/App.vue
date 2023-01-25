@@ -58,6 +58,21 @@ export default{
           url: "https://avada.theme-fusion.com/driving/blog/",
           stato: false
         }
+      ],
+
+      footerList:[
+          {
+            title: "Pass Plus"
+          },
+          {
+            title: "Intensive Course"
+          },
+          {
+            title: "Automatic"
+          },
+          {
+            title: "Instructor Training"
+          },
       ]
     }
   }
@@ -72,7 +87,7 @@ export default{
 <AppContent4/>
 <AppContent5/>
 <AppContent6/>
-<AppFooter/>
+<AppFooter :footerList="footerList"/>
 </template>
 
 <style lang="scss">
