@@ -1,10 +1,12 @@
 <script >
 import AppHeader from './components/AppHeader.vue'
+import AppContent1 from './components/AppContent1.vue'
 import AppFooter from './components/AppFooter.vue'
 
 export default{
   components: {
     AppHeader,
+    AppContent1,
     AppFooter
   }, 
   data(){
@@ -52,6 +54,7 @@ export default{
 
 <template>
 <AppHeader :navList="navList"/>
+<AppContent1/>
 <AppFooter/>
 </template>
 
