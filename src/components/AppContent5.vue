@@ -6,28 +6,41 @@ export default {
         testimonials:[
            
             {
-                img: '../assets/images/testimonial-grant.png',
+                img: '/images/testimonial-grant.png',
                 nome: 'Grant'
             },
             {
-                img: '../assets/images/testimonial-harold.png',
+                img: '/images/testimonial-harold.png',
                 nome: 'Harold'
             },
             {
-                img: '../assets/images/testimonial-kate.png',
+                img: '/images/testimonial-kate.png',
                 nome: 'Kate'
             },
             {
-                img: '../assets/images/testimonial-kelly.png',
+                img: '/images/testimonial-kelly.png',
                 nome: 'Kelly'
             },
             {
-                img: '../assets/images/testimonial-sophia.png',
+                img: '/images/testimonial-sophia.png',
                 nome: 'Sophia'
             },
         
         ]
     }
+   },
+   methods: {
+    slider(){
+        setInterval(() => {
+            this.setSlider(this.activeItem == 4 ? 0 : this.activeItem + 1)
+        }, 2000);
+    },
+    setSlider(index){
+        this.activeItem = index
+    }
+   },
+   beforeMount(){
+    this.slider()
    }
 }
 </script>
@@ -83,16 +96,16 @@ export default {
             <h1>Testimonials</h1>
             <h2>Here's what our happy drivers had to say about our services:</h2>
             <div class="img-container">
-                <img src="../assets/images/testimonial-grant.png" alt="tsm-img">
+                <img :src="testimonials[this.activeItem].img" alt="tsm-img">
             </div>
             <p>Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.</p>
-            <p class="name">Grant</p>
+            <p class="name">{{testimonials[this.activeItem].nome}}</p>
             <div class="circles-container">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                    <div class="circle" @click="setSlider(0)" :class="activeItem == 0 ? 'active' : ''"></div>
+                    <div class="circle" @click="setSlider(1)" :class="activeItem == 1 ? 'active' : ''"></div>
+                    <div class="circle" @click="setSlider(2)" :class="activeItem == 2 ? 'active' : ''"></div>
+                    <div class="circle" @click="setSlider(3)" :class="activeItem == 3 ? 'active' : ''"></div>
+                    <div class="circle" @click="setSlider(4)" :class="activeItem == 4 ? 'active' : ''"></div>
             </div>
         </div>
     </div>
@@ -195,7 +208,7 @@ export default {
 
     .container6{
         background-image: url('../assets/images/testimonial-background.jpg');
-        height: 800px;
+        height: 900px;
         padding-top: 200px;
         background-size: cover;
         position: relative;
@@ -204,6 +217,7 @@ export default {
         .width50{
             width: 50%;
             margin: 0 auto;
+            
 
             h1{
                 color: $black;
@@ -236,6 +250,7 @@ export default {
             .circles-container{
                 display: flex;
                 justify-content: center;
+                
                 .circle{
                     display: inline-block;
                     width: 10px;
