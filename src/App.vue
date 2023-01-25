@@ -4,6 +4,7 @@ import AppContent1 from './components/AppContent1.vue'
 import AppContent2 from './components/AppContent2.vue'
 import AppContent3 from './components/AppContent3.vue'
 import AppContent4 from './components/AppContent4.vue'
+import AppContent5 from './components/AppContent5.vue'
 import AppFooter from './components/AppFooter.vue'
 
 export default{
@@ -13,6 +14,7 @@ export default{
     AppContent2,
     AppContent3,
     AppContent4,
+    AppContent5,
     AppFooter
   }, 
   data(){
@@ -64,6 +66,7 @@ export default{
 <AppContent2/>
 <AppContent3/>
 <AppContent4/>
+<AppContent5/>
 <AppFooter/>
 </template>
 

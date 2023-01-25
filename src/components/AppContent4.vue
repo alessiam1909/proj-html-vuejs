@@ -42,6 +42,7 @@ export default {
 
     .container4{
         position: relative;
+        height: 400px;
         img{
             width: 100vw;
             filter: invert(5%)
@@ -53,7 +54,7 @@ export default {
             padding: 0 100px;
             position: absolute;
             padding-bottom: 100px;
-            top: -15%;
+            top: -10%;
             left: 15%;
 
 
