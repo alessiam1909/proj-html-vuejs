@@ -9,6 +9,7 @@ export default{
   }, 
   data(){
     return{
+      activeItem: 0,
       navList: [
         {
           name: "HOME",
@@ -27,7 +28,7 @@ export default{
         },
         {
           name: "COURSES",
-          url: "https://avada.theme-fusion.com/driving/courses/",
+          url: "#",
           new: true,
           dropdownMenu: ["Intensive", "Pass Plus", "Instructor"],
           isOpen: false,
