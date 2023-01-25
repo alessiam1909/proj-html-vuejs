@@ -28,10 +28,13 @@ export default {
     .container{
         @include width70;
         @include flex-between;
+        height: 600px;
+        margin-bottom: 150px;
+        position: relative;
 
         .paragrafo{
             width: 40%;
-            margin: 50px;
+            margin: 50px 0;
 
             h1{
                 color: $black;
@@ -55,14 +58,15 @@ export default {
 
         .form{
             position: absolute;
-            border-radius: 20px;
+            border-radius: 15px;
             border: 1px solid $lightgrey;
             left: 50%;
-            top: 70%;
+            top: 40%;
+            transform: translateY(-50%);
             height: 600px;
             background-color: $white;
             text-align: center;
-            width: 27%;
+            width: 45%;
             box-shadow: 5px 10px 10px 5px $lightgrey;
 
             h2{
@@ -84,6 +88,7 @@ export default {
                 height: 50px;
                 background-color: $lightgrey;
                 border: 1px solid $grey;
+                border-radius: 5px;
                 padding-left: 20px;
 
                 &:active, &:focus{

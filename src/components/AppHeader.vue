@@ -208,6 +208,7 @@ export default {
                     padding: 10px 25px;
                     font-size: 15px;
                     border-radius: 20px;
+                    font-weight: 500;
                     
 
                     &:hover, &:active{
