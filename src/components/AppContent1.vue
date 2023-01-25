@@ -29,7 +29,7 @@ export default {
         @include width70;
         @include flex-between;
         height: 600px;
-        margin-bottom: 150px;
+        margin-bottom: 50px;
         position: relative;
 
         .paragrafo{
