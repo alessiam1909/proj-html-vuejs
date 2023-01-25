@@ -148,6 +148,7 @@ export default {
             display: flex;
             justify-content: space-between;
             position: absolute;
+            z-index: 1;
 
             .card{
                 padding: 30px ;
@@ -197,6 +198,7 @@ export default {
         height: 800px;
         padding-top: 200px;
         background-size: cover;
+        position: relative;
         text-align: center;
 
         .width50{
